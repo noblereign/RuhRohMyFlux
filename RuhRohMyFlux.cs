@@ -29,7 +29,7 @@ public class RuhRohMyFlux : ResoniteMod
     [AutoRegisterConfigKey] private static ModConfigurationKey<bool> SPATIALIZE = new ModConfigurationKey<bool>("spatialize", "Spatialize audio", () => true);
     [AutoRegisterConfigKey] private static ModConfigurationKey<float> VOLUME = new ModConfigurationKey<float>("volume", "Audio volume", () => 1.0f);
     [AutoRegisterConfigKey] private static ModConfigurationKey<float> SPEED = new ModConfigurationKey<float>("speed", "Audio speed", () => 1.0f);
-    [AutoRegisterConfigKey] private static ModConfigurationKey<string> ERROR_SOUND = new ModConfigurationKey<string>("errorSound", "Error sound", () => "resdb:///221eaa8ecf351bcc035678820fe2a96550b21183fa5c628153f621390db88831.brson");
+    [AutoRegisterConfigKey] private static ModConfigurationKey<string> ERROR_SOUND = new ModConfigurationKey<string>("errorSound", "Error sound", () => "resdb:///4966144e2a64b2c13a4314439434fca7dae75c55680e2071105fd84cac888768.wav");
 
     public override void OnEngineInit()
     {
