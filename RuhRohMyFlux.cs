@@ -83,7 +83,7 @@ public class RuhRohMyFlux : ResoniteMod
                             pos = tool.Slot.GlobalPosition;
                         break;
                     }
-                    SlotAssets.PlayOneShot(__instance.World, pos, audioClip, config.GetValue(VOLUME), config.GetValue(SPATIALIZE), config.GetValue(SPEED), nodeSlot, AudioDistanceSpace.Global, true);
+                    SlotAssets.PlayOneShot(__instance.World, pos, audioClip, config.GetValue(VOLUME), config.GetValue(SPATIALIZE), null, config.GetValue(SPEED), nodeSlot, AudioDistanceSpace.Global, true);
                     
                     node.RunInSeconds((float) audioClipAssetMetadata.Duration, () => {
                         audioClipAssetMetadata.Destroy();
