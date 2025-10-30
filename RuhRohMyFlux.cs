@@ -14,7 +14,7 @@ public class RuhRohMyFlux : ResoniteMod
 {
     public override string Author => "LeCloutPanda";
     public override string Name => "Ruh Roh My Flux";
-    public override string Version => "1.0.0";
+    public override string Version => "1.0.2";
     public override string Link => "https://github.com/LeCloutPanda/RuhRohMyFlux";
 
     private enum posOption {
@@ -25,7 +25,7 @@ public class RuhRohMyFlux : ResoniteMod
 
     public static ModConfiguration config;
     [AutoRegisterConfigKey] private static ModConfigurationKey<bool> ENABLED = new ModConfigurationKey<bool>("enabled", "Enabled", () => true);
-    [AutoRegisterConfigKey] private static ModConfigurationKey<posOption> POS_OPTION = new ModConfigurationKey<posOption>("posOption", "Positon to play audio", () => posOption.groupCentre);
+    [AutoRegisterConfigKey] private static ModConfigurationKey<posOption> POS_OPTION = new ModConfigurationKey<posOption>("posOption", "Position to play audio", () => posOption.groupCentre);
     [AutoRegisterConfigKey] private static ModConfigurationKey<bool> SPATIALIZE = new ModConfigurationKey<bool>("spatialize", "Spatialize audio", () => true);
     [AutoRegisterConfigKey] private static ModConfigurationKey<float> VOLUME = new ModConfigurationKey<float>("volume", "Audio volume", () => 1.0f);
     [AutoRegisterConfigKey] private static ModConfigurationKey<float> SPEED = new ModConfigurationKey<float>("speed", "Audio speed", () => 1.0f);
@@ -56,7 +56,7 @@ public class RuhRohMyFlux : ResoniteMod
             if (!config.GetValue(ENABLED)) return;
 
             if (!__instance.IsValid) {
-                ProtoFluxTool tool = (ProtoFluxTool) __instance.World.LocalUser.GetActiveTool();
+                Tool tool = (Tool) __instance.World.LocalUser.GetActiveTool();
                 ProtoFluxNode[] nodes = __instance.Nodes.ToArray();
                 ProtoFluxNode node = nodes[nodes.Length - 1];
                 Slot nodeSlot = node.Slot;
